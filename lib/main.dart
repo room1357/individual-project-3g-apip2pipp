@@ -6,6 +6,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'services/expense_service.dart';
 import 'services/storage_service.dart';
 import 'services/auth_service.dart';
+import 'services/shared_expense_service.dart';
 
 // screens
 import 'screens/login_screen.dart';
@@ -15,9 +16,15 @@ import 'screens/expense_list_screen.dart';
 import 'screens/category_screen.dart';
 import 'screens/statistics_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/edit_profile_screen.dart';
+import 'screens/change_password_screen.dart';
+import 'screens/delete_account_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/about_screen.dart';
 import 'screens/looping_demo_screen.dart';
+import 'screens/shared_expense_screen.dart';
+import 'screens/add_shared_expense_screen.dart';
+import 'screens/user_selection_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,6 +41,15 @@ Future<void> main() async {
               (_) =>
                   ExpenseService(StorageService())
                     ..init(fallbackUser: 'user-1'),
+        ),
+        // ⬇️ PROVIDER UNTUK SHARED EXPENSE
+        ChangeNotifierProxyProvider2<AuthService, ExpenseService, SharedExpenseService>(
+          create: (context) => SharedExpenseService(
+            context.read<AuthService>(),
+            context.read<ExpenseService>(),
+          ),
+          update: (context, authService, expenseService, previous) =>
+              previous ?? SharedExpenseService(authService, expenseService),
         ),
       ],
       child: const MyApp(),
@@ -67,6 +83,9 @@ class MyApp extends StatelessWidget {
         '/settings': (_) => const SettingsScreen(),
         '/about': (_) => const AboutScreen(),
         '/loops': (_) => const LoopingDemoScreen(), // <- tanpa spasi
+        '/shared-expenses': (_) => const SharedExpenseScreen(),
+        '/add-shared-expense': (_) => const AddSharedExpenseScreen(),
+        '/user-selection': (_) => const UserSelectionScreen(),
       },
     );
   }

@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // pakai named routes
-      initialRoute: '/splashs',
+      initialRoute: '/splash',
       routes: {
         '/splash': (_) => const SplashScreen(),
         '/onboarding': (_) => const OnboardingScreen(),

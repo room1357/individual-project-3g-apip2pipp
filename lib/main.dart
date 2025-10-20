@@ -9,7 +9,10 @@ import 'services/auth_service.dart';
 import 'services/shared_expense_service.dart';
 
 // screens
+import 'screens/onboarding_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/register_screen.dart';
+import 'screens/forgot_password_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/expense_list_screen.dart';
@@ -35,21 +38,40 @@ Future<void> main() async {
       providers: [
         // ⬇️ PROVIDER UNTUK AUTH (wajib ada agar context.read<AuthService>() tidak error)
         ChangeNotifierProvider(create: (_) => AuthService()..loadSession()),
-        // ⬇️ PROVIDER LAMA UNTUK EXPENSE
-        ChangeNotifierProvider(
-          create:
-              (_) =>
-                  ExpenseService(StorageService())
-                    ..init(fallbackUser: 'user-1'),
+        // ⬇️ PROVIDER UNTUK EXPENSE (terintegrasi dengan AuthService)
+        ChangeNotifierProxyProvider<AuthService, ExpenseService>(
+          create: (context) {
+            final expenseService = ExpenseService(StorageService());
+            // Inisialisasi dengan fallback user
+            expenseService.init(fallbackUser: 'user-1');
+            return expenseService;
+          },
+          update: (context, authService, previous) {
+            final expenseService = previous ?? ExpenseService(StorageService());
+
+            // Switch user saat ada perubahan di AuthService
+            if (authService.isLoggedIn &&
+                authService.currentUserEmail != null) {
+              expenseService.switchUser(authService.currentUserEmail!);
+            }
+
+            return expenseService;
+          },
         ),
         // ⬇️ PROVIDER UNTUK SHARED EXPENSE
-        ChangeNotifierProxyProvider2<AuthService, ExpenseService, SharedExpenseService>(
-          create: (context) => SharedExpenseService(
-            context.read<AuthService>(),
-            context.read<ExpenseService>(),
-          ),
-          update: (context, authService, expenseService, previous) =>
-              previous ?? SharedExpenseService(authService, expenseService),
+        ChangeNotifierProxyProvider2<
+          AuthService,
+          ExpenseService,
+          SharedExpenseService
+        >(
+          create:
+              (context) => SharedExpenseService(
+                context.read<AuthService>(),
+                context.read<ExpenseService>(),
+              ),
+          update:
+              (context, authService, expenseService, previous) =>
+                  previous ?? SharedExpenseService(authService, expenseService),
         ),
       ],
       child: const MyApp(),
@@ -74,7 +96,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splash',
       routes: {
         '/splash': (_) => const SplashScreen(),
+        '/onboarding': (_) => const OnboardingScreen(),
         '/login': (_) => const LoginScreen(),
+        '/register': (_) => const RegisterScreen(),
+        '/forgot-password': (_) => const ForgotPasswordScreen(),
         '/home': (_) => const HomeScreen(),
         '/expenses': (_) => const ExpenseListScreen(),
         '/categories': (_) => const CategoryScreen(),

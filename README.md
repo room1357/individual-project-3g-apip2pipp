@@ -1,42 +1,316 @@
-# Biodata Mahasiswa
+# Biodata Mahasiswa — Individual Project
 
-## Nama
-**Muhammad Afif Khosyidzaki**
-
-## Kelas
-**SIB-3G**
-
-## NIM
-**2341760159**
-
-## Nomor ID
-**14**
+## Identitas
+- **Nama:** Muhammad Afif Khosyidzaki  
+- **Kelas:** SIB-3G  
+- **NIM:** 2341760159  
+- **Nomor ID:** 14
 
 ## Tentang Saya
-Saya adalah mahasiswa Program Studi Sistem Informasi Bisnis di Politeknik Negeri Malang Saat ini, saya sedang mengambil mata kuliah Pemrograman Mobile, di mana saya belajar dan mengembangkan aplikasi berbasis Flutter. Saya berfokus pada pengembangan aplikasi mobile yang inovatif dan siap menghadapi tantangan dalam dunia digital.
-
-Di luar kegiatan akademik, saya memiliki minat dalam teknologi, terutama dalam pengembangan perangkat lunak dan aplikasi mobile. Saya berharap dapat terus mengasah kemampuan saya dan berkontribusi dalam berbagai proyek teknologi.
+Saya mahasiswa Program Studi Sistem Informasi Bisnis di Politeknik Negeri Malang. Saat ini mengikuti mata kuliah Pemrograman Mobile dan aktif mengembangkan aplikasi berbasis Flutter. Saya tertarik pada pengembangan perangkat lunak dan aplikasi mobile, serta ingin terus mengasah kemampuan praktis saya melalui proyek nyata.
 
 ## Kontak
-Email: [email@example.com]  *(Gantilah dengan email yang aktif jika diperlukan)*
+- Email: afifkhosyidzaki@gmail.com  
 
 ---
 
-**Saya siap untuk belajar lebih banyak dan mengembangkan potensi di dunia teknologi!**
+## Tentang Proyek
+Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman Mobile. Tujuan proyek: belajar struktur proyek Flutter, state management dasar, dan pembuatan UI yang responsif.
 
-# pemrograman_mobile
+## Fitur
+- Tampilan biodata mahasiswa
+- Struktur proyek Flutter siap dikembangkan
+- Contoh navigasi dan layout dasar
 
-A new Flutter project.
 
-## Getting Started
+# 💰 Saku Rapi
 
-This project is a starting point for a Flutter application.
+*Aplikasi Flutter untuk mencatat dan menganalisis pengeluaran pengguna.*
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<!-- OPTIONAL: Letakkan logo/banner di folder `assets/screenshots/` lalu ganti path di bawah ini -->
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<!-- ![Banner](assets/screenshots/banner.png) -->
+
+<p align="left">
+  <!-- Badges (opsional, boleh kamu hapus) -->
+  <a href="https://flutter.dev/"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-3.x-blue.svg" /></a>
+  <a href="https://dart.dev/"><img alt="Dart" src="https://img.shields.io/badge/Dart-3.x-0175C2.svg" /></a>
+  <a href="#"><img alt="Platform" src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Desktop-informational.svg" /></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-success.svg" /></a>
+</p>
+
+---
+
+## 🧭 Deskripsi Singkat
+
+**Saku Rapi** adalah aplikasi keuangan pribadi berbasis Flutter yang membantu pengguna mencatat, mengelola, dan menganalisis pengeluaran mereka secara efisien. Aplikasi dirancang dengan antarmuka yang sederhana namun informatif, sehingga pengguna dapat memahami alur keuangan harian dengan cepat.
+
+> **Repo:** `apip2pipp/individual-project-3g-apip2pipp`
+
+---
+
+## 🔗 Demo & Screenshot
+
+> **Demo (opsional):** Tambahkan tautan deploy atau video demo bila tersedia, misalnya GitHub Pages (untuk web), Vercel/Netlify, atau YouTube.
+>
+> Contoh: **Demo Web:** [https://example.com](https://example.com)
+> Contoh: **Video Demo:** [https://youtu.be/xxxxxxxxxxx](https://youtu.be/xxxxxxxxxxx)
+
+**Penempatan Screenshot**
+
+* Simpan gambar di: `assets/screenshots/`
+* Gunakan path relatif di README: `![Home](assets/screenshots/home.png)`
+* Untuk grid screenshot:
+
+```html
+<p align="left">
+  <img src="assets/screenshots/1_home.png" width="30%" />
+  <img src="assets/screenshots/2_add_expense.png" width="30%" />
+  <img src="assets/screenshots/3_stats.png" width="30%" />
+</p>
+```
+
+---
+
+## 🖼️ App Preview
+
+### 🪪 Logo
+
+<p align="left">
+  <img src="assets/screenshots/logo.png" width="60%" alt="Logo Saku Rapi" />
+</p>
+
+> **Deskripsi:**
+> Logo utama aplikasi yang digunakan pada splash screen dan halaman login.
+> Mencerminkan gaya minimalis & profesional sebagai identitas visual aplikasi pengelola keuangan **Saku Rapi**.
+
+---
+
+### ⚡ Splash Screen
+
+<p align="left">
+  <img src="assets/screenshots/splash.png" width="70%" alt="Splash Screen Saku Rapi" />
+</p>
+
+> **Deskripsi:**
+> Tampilan pertama ketika aplikasi dibuka. Splash menampilkan logo aplikasi beberapa detik sebelum menuju onboarding atau login.
+> Transisi umumnya diatur menggunakan `Future.delayed` kemudian `Navigator.pushReplacement` menuju halaman berikutnya.
+
+<!--
+Tambahkan bagian-bagian berikut sesuai kebutuhan Anda (hapus komentar ini dan ganti path gambarnya):
+
+### 🚪 Onboarding
+<p align="left">
+  <img src="assets/screenshots/onboarding.png" width="70%" alt="Onboarding" />
+</p>
+> **Deskripsi:** Perkenalan fitur inti & izin dasar aplikasi.
+
+### 🔑 Login / Register
+<p align="left">
+  <img src="assets/screenshots/login.png" width="45%" alt="Login" />
+  <img src="assets/screenshots/register.png" width="45%" alt="Register" />
+</p>
+> **Deskripsi:** Autentikasi lokal untuk tiap pengguna.
+
+### 🏠 Home & Daftar Pengeluaran
+<p align="left">
+  <img src="assets/screenshots/home.png" width="70%" alt="Home" />
+</p>
+> **Deskripsi:** Ringkasan saldo & daftar transaksi terbaru.
+
+### ➕ Tambah/Edit Pengeluaran
+<p align="left">
+  <img src="assets/screenshots/add_expense.png" width="45%" alt="Tambah Pengeluaran" />
+  <img src="assets/screenshots/edit_expense.png" width="45%" alt="Edit Pengeluaran" />
+</p>
+> **Deskripsi:** Form transaksi dengan kategori, tanggal, dan catatan.
+
+### 📊 Statistik
+<p align="left">
+  <img src="assets/screenshots/statistics.png" width="70%" alt="Statistik" />
+</p>
+> **Deskripsi:** Grafik & ringkasan per periode.
+
+### 🧾 Ekspor PDF
+<p align="left">
+  <img src="assets/screenshots/export_pdf.png" width="70%" alt="Ekspor PDF" />
+</p>
+> **Deskripsi:** Hasil ekspor laporan pengeluaran ke format PDF.
+-->
+
+---
+
+## 🌟 Fitur Utama
+
+* 🧾 **Catat Pengeluaran** – tambah, edit, hapus dengan kategori.
+* 🗂️ **Manajemen Kategori** – buat dan kelola kategori sesuai kebutuhan.
+* 📊 **Statistik** – ringkasan mingguan & bulanan, grafik sederhana.
+* 👥 **Multi-User (Lokal)** – profil pengguna dan pengeluaran bersama (*shared expense*).
+* 🔐 **Autentikasi Dasar** – login/register, lupa kata sandi (simulasi lokal).
+* 🧮 **Ekspor PDF** – cetak laporan pengeluaran ke PDF.
+* ⚙️ **Pengaturan** – ubah profil, ganti password, preferensi tampilan.
+
+> **Catatan:** Fitur mengikuti struktur kode pada direktori `lib/screens` & `lib/services` (lihat **Struktur Proyek**).
+
+---
+
+## ⚙️ Teknologi yang Digunakan
+
+* **Flutter SDK** + **Dart**
+* **Shared Preferences** – penyimpanan lokal sederhana
+* **Provider** (atau setara) – manajemen state
+* **intl** – format tanggal & mata uang (IDR)
+* **pdf & printing** – ekspor laporan ke PDF
+* **path_provider** – akses direktori lokal
+
+> Sesuaikan daftar ini dengan `pubspec.yaml` bila kamu menambah/mengganti paket.
+
+---
+
+## 🧰 Prasyarat
+
+* **Flutter** (stable 3.x) & **Dart 3.x** terpasang
+* SDK platform sesuai target (Android/iOS/Web/Desktop)
+* Perangkat/Emulator aktif
+
+Cek versi:
+
+```bash
+flutter --version
+```
+
+---
+
+## 🚀 Instalasi & Menjalankan
+
+```bash
+# 1) Clone repository
+git clone https://github.com/apip2pipp/individual-project-3g-apip2pipp.git
+
+# 2) Masuk direktori
+cd individual-project-3g-apip2pipp
+
+# 3) Install dependency
+flutter pub get
+
+# 4) Jalankan (pilih salah satu device)
+flutter run                    # otomatis memilih device aktif
+flutter run -d chrome          # Web
+flutter run -d android         # Android emulator / device
+flutter run -d windows         # Windows Desktop
+```
+
+### Build Rilis (opsional)
+
+```bash
+# Android (APK release)
+flutter build apk --release
+
+# Web (release)
+flutter build web --release
+```
+
+---
+
+## 🗂️ Struktur Proyek (Ringkas)
+
+```
+lib/
+ ├── main.dart
+ ├── models/              # Model data (category, expense)
+ ├── screens/             # UI screens (home, login, statistics, dll.)
+ ├── services/            # Logika bisnis (auth, expense, pdf export)
+ └── utils/               # Utility (format tanggal, rupiah, dll.)
+
+assets/
+ ├── auth/
+ ├── icon/
+ ├── onboarding/
+ └── screenshots/         # <— taruh screenshot README di sini
+
+# Lihat repo untuk struktur lengkap lintas platform (android, ios, web, windows, dll.)
+```
+
+> Struktur lengkap platform tersedia di repo (Android/iOS/Web/Desktop). File penting: `pubspec.yaml`, `analysis_options.yaml`, `README.md`.
+
+---
+
+## 🧪 Modul Penting
+
+* `lib/services/expense_service.dart` – CRUD pengeluaran & perhitungan ringkas
+* `lib/services/pdf_export_service.dart` – generator PDF laporan
+* `lib/services/shared_expense_service.dart` – pengeluaran bersama (multi-user)
+* `lib/services/auth_service.dart` – autentikasi lokal sederhana
+* `lib/screens/statistics_screen.dart` – statistik & grafik ringkas
+
+---
+
+## 🧑‍💻 Panduan Singkat Penggunaan
+
+1. **Onboarding & Splash** → kenalkan fitur inti.
+2. **Registrasi/Log Masuk** → buat akun lokal (disimpan di perangkat).
+3. **Tambah Pengeluaran** → isi nominal, kategori, tanggal, catatan.
+4. **Lihat Statistik** → pantau ringkasan & tren per periode.
+5. **Ekspor PDF** → buat laporan dan simpan/bagikan.
+
+---
+
+## 🔧 Konfigurasi Aset (opsional untuk di dalam aplikasi)
+
+Tambahkan aset ke `pubspec.yaml` jika digunakan di **aplikasi** (tidak wajib untuk README):
+
+```yaml
+flutter:
+  assets:
+    - assets/auth/
+    - assets/icon/
+    - assets/onboarding/
+    # Screenshot untuk README tidak perlu didaftarkan
+```
+
+---
+
+## 🧯 Troubleshooting
+
+* **Masalah dependency**: jalankan `flutter pub cache repair` lalu `flutter pub get`.
+* **Device tidak terdeteksi**: cek `flutter devices`, pastikan emulator/USB debugging aktif.
+* **Error izin Android**: pastikan `AndroidManifest.xml` memiliki izin Internet bila perlu.
+* **Masalah font/format rupiah**: pastikan paket `intl` telah ditambahkan dan diinisialisasi.
+
+---
+
+## 🗺️ Roadmap (Ringkas)
+
+* [ ] Sinkronisasi cloud (Firestore / Supabase) (opsional)
+* [ ] Impor/ekspor CSV
+* [ ] Kustom kategori dengan ikon
+* [ ] Filter & pencarian lanjutan
+* [ ] Dark mode menyeluruh
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi terbuka untuk perbaikan bug, dokumentasi, atau pengembangan fitur.
+
+1. Fork → 2) Buat branch fitur → 3) Commit → 4) Pull Request.
+
+---
+
+## 👥 Kontributor
+
+* **Apip** — Developer utama
+  *Politeknik Negeri Malang, Teknologi Informasi*
+
+---
+
+## 🛡️ Lisensi
+
+Rilis di bawah **MIT License**. Silakan lihat file `LICENSE` untuk detail.
+
+---
+
+> 🧠 *“Kelola uangmu dengan rapi, maka hidupmu pun ikut teratur.”*
+> Dibangun dengan ❤️ menggunakan Flutter.

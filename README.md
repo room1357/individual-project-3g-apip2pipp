@@ -94,7 +94,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 > **Deskripsi:**
 > Tampilan pertama ketika aplikasi dibuka. Splash menampilkan logo aplikasi beberapa detik sebelum menuju onboarding atau login.
-> Transisi umumnya diatur menggunakan `Future.delayed` kemudian `Navigator.pushReplacement` menuju halaman berikutnya.
+> Transisi umumnya diatur menggunakan `Future.delayed` kemudian `Navigator.pushReplacement` menuju halaman berikutnya.a
 
 ---
 

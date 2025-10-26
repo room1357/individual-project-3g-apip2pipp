@@ -35,10 +35,9 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 <p align="left">
   <!-- Badges (opsional, boleh kamu hapus) -->
-  <a href="https://flutter.dev/"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-3.x-blue.svg" /></a>
-  <a href="https://dart.dev/"><img alt="Dart" src="https://img.shields.io/badge/Dart-3.x-0175C2.svg" /></a>
+  <a href="https://flutter.dev/"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-3.35.1-blue.svg" /></a>
+  <a href="https://dart.dev/"><img alt="Dart" src="https://img.shields.io/badge/Dart-3.9,0-0175C2.svg" /></a>
   <a href="#"><img alt="Platform" src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Desktop-informational.svg" /></a>
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-success.svg" /></a>
 </p>
 
 ---
@@ -53,8 +52,6 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ## 🔗 Demo & Screenshot
 
-> **Demo (opsional):** Tambahkan tautan deploy atau video demo bila tersedia, misalnya GitHub Pages (untuk web), Vercel/Netlify, atau YouTube.
->
 > Contoh: **Demo Web:** [https://example.com](https://example.com)
 > Contoh: **Video Demo:** [https://youtu.be/xxxxxxxxxxx](https://youtu.be/xxxxxxxxxxx)
 
@@ -91,7 +88,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 ### ⚡ Splash Screen
 
 <p align="left">
-  <img src="assets/screenshots/splash.png" width="70%" alt="Splash Screen Saku Rapi" />
+  <img src="assets\icon\logo2.png" width="70%" alt="Splash Screen Saku Rapi" />
 </p>
 
 > **Deskripsi:**

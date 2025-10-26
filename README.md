@@ -87,7 +87,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ### ⚡ Splash Screen
 
-<p align="left">
+<p align="center">
   <img src="assets\icon\logo2.png" width="70%" alt="Splash Screen Saku Rapi" />
 </p>
 

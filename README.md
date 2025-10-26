@@ -75,67 +75,95 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ### 🪪 Logo
 
-<p align="left">
-  <img src="assets/screenshots/logo.png" width="60%" alt="Logo Saku Rapi" />
+<p align="center">
+  <img src="assets\icon\logo2.png" width="60%" alt="Logo Saku Rapi" />
 </p>
 
 > **Deskripsi:**
-> Logo utama aplikasi yang digunakan pada splash screen dan halaman login.
-> Mencerminkan gaya minimalis & profesional sebagai identitas visual aplikasi pengelola keuangan **Saku Rapi**.
+> Logo Saku Rapi dibangun dari dua bentuk utama: hijau (keuangan real pengguna) dan biru (bantuan analisis yang terpercaya). Keduanya bertemu di ruang putih — ruang yang bersih, jujur, dan mudah dipahami.
+> Hijau mewakili pertumbuhan finansial sehari-hari. Biru mewakili kendali dan ketenangan dalam mengambil keputusan. Putih di tengah merepresentasikan transparansi: tidak ada lagi pengeluaran yang “hilang entah kemana,” semuanya terang.
+>Filosofinya sederhana: uangmu aman, jelas, dan di bawah kendali kamu. **Saku Rapi**.
 
 ---
 
 ### ⚡ Splash Screen
 
 <p align="center">
-  <img src="assets\icon\logo2.png" width="70%" alt="Splash Screen Saku Rapi" />
+  <img src="assets\screenshots\DEMO1_SplahsScreen.png" width="70%" alt="Splash Screen Saku Rapi" />
 </p>
 
 > **Deskripsi:**
 > Tampilan pertama ketika aplikasi dibuka. Splash menampilkan logo aplikasi beberapa detik sebelum menuju onboarding atau login.
 > Transisi umumnya diatur menggunakan `Future.delayed` kemudian `Navigator.pushReplacement` menuju halaman berikutnya.
 
-<!--
-Tambahkan bagian-bagian berikut sesuai kebutuhan Anda (hapus komentar ini dan ganti path gambarnya):
+---
 
 ### 🚪 Onboarding
-<p align="left">
+<p align="center">
   <img src="assets/screenshots/onboarding.png" width="70%" alt="Onboarding" />
 </p>
-> **Deskripsi:** Perkenalan fitur inti & izin dasar aplikasi.
+
+> **Deskripsi**
+> Layar onboarding memperkenalkan fungsi utama SakuRapi sebelum pengguna mulai memakai aplikasi.  
+> Setiap slide menjelaskan manfaat inti aplikasi:
+> - **Pantau Pengeluaran** – Catat setiap pengeluaran harian dengan cepat; tahu uangmu lari ke mana.
+> - **Data Aman & Ekspor** – Data disimpan secara lokal di perangkat. Laporan bisa diekspor kapan saja ke PDF untuk dibagikan.
+> - **Target & Peringat** – Pasang target pengeluaran/tabungan dan dapatkan peringatan saat hampir melewati batas.
+> - **Kategori Fleksibel** – Buat dan atur kategori sendiri (makan, transport, hobi, dll.) sesuai gaya hidupmu.
+> - **Insight yang Jelas** – Grafik ringkas membantu melihat pola belanja dan area paling boros.
+> - **Anggaran Terkontrol** – Tetapkan anggaran bulanan dan pantau sisa anggaran secara real-time agar belanja lebih terarah.
+>
+> Onboarding ini juga langsung menyediakan dua tindakan utama di bagian bawah:  
+> `Daftar Gratis` untuk membuat akun lokal baru dan `Masuk` untuk pengguna yang sudah pernah tercatat.  
+> Versi aplikasi (misal `Versi 1.0`) ditampilkan agar pengguna tahu build yang sedang digunakan.
+
+---
 
 ### 🔑 Login / Register
 <p align="left">
-  <img src="assets/screenshots/login.png" width="45%" alt="Login" />
-  <img src="assets/screenshots/register.png" width="45%" alt="Register" />
+  <img src="assets\screenshots\DEMO4_LoginScreen.png" width="45%" alt="Login" />
+  <img src="assets\screenshots\DEMO3_RegisterScreen.png" width="45%" alt="Register" />
 </p>
+
 > **Deskripsi:** Autentikasi lokal untuk tiap pengguna.
 
+---
+
 ### 🏠 Home & Daftar Pengeluaran
-<p align="left">
+<p align="center">
   <img src="assets/screenshots/home.png" width="70%" alt="Home" />
 </p>
+
 > **Deskripsi:** Ringkasan saldo & daftar transaksi terbaru.
 
+---
+
 ### ➕ Tambah/Edit Pengeluaran
-<p align="left">
+<p align="center">
   <img src="assets/screenshots/add_expense.png" width="45%" alt="Tambah Pengeluaran" />
   <img src="assets/screenshots/edit_expense.png" width="45%" alt="Edit Pengeluaran" />
 </p>
+
 > **Deskripsi:** Form transaksi dengan kategori, tanggal, dan catatan.
 
+---
+
 ### 📊 Statistik
-<p align="left">
+<p align="center">
   <img src="assets/screenshots/statistics.png" width="70%" alt="Statistik" />
 </p>
+
 > **Deskripsi:** Grafik & ringkasan per periode.
 
+---
+
 ### 🧾 Ekspor PDF
-<p align="left">
+<p align="center">
   <img src="assets/screenshots/export_pdf.png" width="70%" alt="Ekspor PDF" />
 </p>
+
 > **Deskripsi:** Hasil ekspor laporan pengeluaran ke format PDF.
--->
+
 
 ---
 

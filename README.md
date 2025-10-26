@@ -89,7 +89,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 ### ⚡ Splash Screen
 
 <p align="center">
-  <img src="assets\screenshots\DEMO1_SplahsScreen.png" width="70%" alt="Splash Screen Saku Rapi" />
+  <img src="assets/screenshots/DEMO1_SplahsScreen.png" width="70%" alt="Splash Screen Saku Rapi" />
 </p>
 
 > **Deskripsi:**
@@ -100,7 +100,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ### 🚪 Onboarding
 <p align="center">
-  <img src="assets/screenshots/onboarding.png" width="70%" alt="Onboarding" />
+  <img src="assets/screenshots/DEMO2_OnboardingScreen.png" width="70%" alt="Onboarding" />
 </p>
 
 > **Deskripsi**

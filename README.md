@@ -89,12 +89,12 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 ### ⚡ Splash Screen
 
 <p align="center">
-  <img src="screenshots/DEMO1_SplahsScreen.png" width="70%" alt="Splash Screen Saku Rapi" />
+  <img src="assets/screenshots/DEMO1_SplahsScreen.png" width="70%" alt="Splash Screen Saku Rapi" />
 </p>
 
 > **Deskripsi:**
 > Tampilan pertama ketika aplikasi dibuka. Splash menampilkan logo aplikasi beberapa detik sebelum menuju onboarding atau login.
-> Transisi umumnya diatur menggunakan `Future.delayed` kemudian `Navigator.pushReplacement` menuju halaman berikutnya.a
+> Transisi umumnya diatur menggunakan `Future.delayed` kemudian `Navigator.pushReplacement` menuju halaman berikutnya.
 
 ---
 

@@ -379,7 +379,7 @@ Kontribusi terbuka untuk perbaikan bug, dokumentasi, atau pengembangan fitur.
 ## 👥 Kontributor
 
 * **Apip** — Developer utama
-  *Politeknik Negeri Malang, Teknologi Informasi*
+  *Apps Expanses, Jurusan Teknologi Informasi*
 
 ---
 

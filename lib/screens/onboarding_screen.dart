@@ -138,7 +138,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 8,
                     decoration: BoxDecoration(
                       color: active 
-                          ? const Color(0xFF10B981) 
+                          ? const Color(0xFF3B82F6) 
                           : const Color(0xFFE5E7EB),
                       borderRadius: BorderRadius.circular(4),
                     ),

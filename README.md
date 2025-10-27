@@ -125,23 +125,49 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
   <img src="assets\screenshots\DEMO3_RegisterScreen.png" width="45%" alt="Register" />
 </p>
 
-> **Deskripsi:** Autentikasi lokal untuk tiap pengguna.
+> **Deskripsi Login:** Halaman masuk ini adalah pintu pertama pengguna sebelum mengelola data keuangan mereka.
+>Pengguna diminta memasukkan email dan password, lalu dapat langsung menekan tombol MASUK untuk autentikasi. Tersedia opsi Lupa Password? sebagai jalur pemulihan akun, sehingga pengguna tidak kehilangan akses jika lupa kata sandi.
+>Selain login biasa, ada juga opsi Gunakan akun demo — ini memungkinkan pengguna mencoba aplikasi tanpa membuat akun baru terlebih dahulu, cocok untuk onboarding cepat.
+>Bagian bawah layar juga mempersiapkan dukungan login pihak ketiga (Google / Apple), yang merepresentasikan arah pengembangan ke integrasi Single Sign-On agar proses masuk makin cepat dan aman.
+>Fokus dari layar ini adalah rasa aman, kesan profesional, dan kesan bahwa pengelolaan finansial itu personal tapi tetap rapi.
+
+> **Deskripsi Register:** Halaman pendaftaran digunakan untuk membuat akun baru di SakuRapi. Pengguna mengisi nama lengkap, email, password, dan konfirmasi password.
+>Flow ini dibuat sederhana agar proses bergabung tidak terasa “ribet seperti aplikasi keuangan profesional”, tapi tetap menjaga kontrol dasar seperti verifikasi password untuk mencegah salah input.
+>Tombol DAFTAR membuat akun lokal baru di perangkat. Ada shortcut Isi dengan demo yang membantu pengguna mencoba fitur tanpa mengisi manual satu per satu, sehingga barrier to entry jadi rendah.
+>Bagian bawah juga menampilkan opsi login dengan Google / Apple sebagai sinyal rencana dukungan autentikasi modern.
+>Intinya: siapa pun bisa mulai merapikan pengeluaran tanpa proses pendaftaran yang melelahkan.
 
 ---
 
 ### 🏠 Home & Daftar Pengeluaran
 <p align="center">
-  <img src="assets/screenshots/home.png" width="70%" alt="Home" />
+  <img src="assets\screenshots\DEMO5_HomeScreen.png" width="70%" alt="Home" />
 </p>
 
-> **Deskripsi:** Ringkasan saldo & daftar transaksi terbaru.
+> **Deskripsi:** Layar Home berfungsi sebagai dashboard pribadi pengguna. Di bagian atas terdapat sapaan personal (“Halo, [nama]! 👋”) untuk memberi rasa kepemilikan dan kedekatan, bukan sekadar aplikasi angka.
+>Widget ringkasan menunjukkan:
+
+> - Total Pengeluaran Bulan Ini beserta total nominal dan jumlah transaksi.
+
+> - Pengeluaran Hari Ini (berapa rupiah yang keluar hari ini).
+
+> - Jumlah Transaksi Hari Ini (berapa transaksi yang sudah tercatat).
+
+>Di bawahnya ada Riwayat Transaksi terbaru (misal: “Mie ayam paknno”), lengkap dengan tanggal dan jumlah rupiah. Ini membantu pengguna cepat ingat “tadi aku habis buat apa ya?”. Navigasi bawah (Home, Statistik, Pengeluaran, Shared, Profil) selalu terlihat, sehingga pengguna bisa langsung:
+
+>- menambah pengeluaran baru,
+>- buka statistik,
+>- cek pengeluaran bersama,
+>- atau ubah profil,
+>hanya dengan satu tap.
+
+>Prinsip layar ini: kasih jawaban cepat atas tiga pertanyaan yang paling sering muncul di kepala pengguna — “Uangku sudah keluar berapa?”, “Hari ini aku beli apa aja?”, dan “Apa aku masih aman bulan ini?”
 
 ---
 
 ### ➕ Tambah/Edit Pengeluaran
 <p align="center">
-  <img src="assets/screenshots/add_expense.png" width="45%" alt="Tambah Pengeluaran" />
-  <img src="assets/screenshots/edit_expense.png" width="45%" alt="Edit Pengeluaran" />
+  <img src="assets\screenshots\DEMO7_AddExpanses&EditScreen.png" width="45%" alt="Tambah Pengeluaran & Edit Pengeluaran" />
 </p>
 
 > **Deskripsi:** Form transaksi dengan kategori, tanggal, dan catatan.
@@ -150,23 +176,30 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ### 📊 Statistik
 <p align="center">
-  <img src="assets/screenshots/statistics.png" width="70%" alt="Statistik" />
+  <img src="assets\screenshots\DEMO6_StatistikScreen.png" width="70%" alt="Statistik" />
 </p>
 
 > **Deskripsi:** Grafik & ringkasan per periode.
 
 ---
 
-### 🧾 Ekspor PDF
+### 👤 Profile Screen
 <p align="center">
-  <img src="assets/screenshots/export_pdf.png" width="70%" alt="Ekspor PDF" />
+  <img src="assets/screenshots/export_pdf.png" width="70%" alt="Profile" />
 </p>
 
-> **Deskripsi:** Hasil ekspor laporan pengeluaran ke format PDF.
-
+> **Deskripsi:** .
 
 ---
 
+### 📲 Share Expanses
+<p align="center">
+  <img src="assets\screenshots\DEMO9_SharedExpansesScreen.png" width="70%" alt="Share Expanses" />
+</p>
+
+> **Deskripsi:** .
+
+---
 ## 🌟 Fitur Utama
 
 * 🧾 **Catat Pengeluaran** – tambah, edit, hapus dengan kategori.

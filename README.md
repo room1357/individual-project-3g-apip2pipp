@@ -52,27 +52,6 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ## 🔗 Demo & Screenshot
 
-> Contoh: **Demo Web:** [https://example.com](https://example.com)
-> Contoh: **Video Demo:** [https://youtu.be/xxxxxxxxxxx](https://youtu.be/xxxxxxxxxxx)
-
-**Penempatan Screenshot**
-
-* Simpan gambar di: `assets/screenshots/`
-* Gunakan path relatif di README: `![Home](assets/screenshots/home.png)`
-* Untuk grid screenshot:
-
-```html
-<p align="left">
-  <img src="assets/screenshots/1_home.png" width="30%" />
-  <img src="assets/screenshots/2_add_expense.png" width="30%" />
-  <img src="assets/screenshots/3_stats.png" width="30%" />
-</p>
-```
-
----
-
-## 🖼️ App Preview
-
 ### 🪪 Logo
 
 <p align="center">
@@ -171,6 +150,17 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 </p>
 
 > **Deskripsi:** Form transaksi dengan kategori, tanggal, dan catatan.
+> Layar ini fokus pada pencatatan transaksi harian agar semua pengeluaran tercatat rapi.  
+> - Bagian daftar menunjukkan riwayat pengeluaran dengan filter kategori, pencarian cepat, total pengeluaran, dan tombol aksi cepat **( + )** untuk menambah transaksi baru.  
+> - Form pengeluaran memungkinkan pengguna mengisi atau mengubah detail transaksi:
+>   - **Judul transaksi** (contoh: “Wagyu A5”)
+>   - **Jumlah (Rp)**
+>   - **Kategori** (Makanan, Transportasi, dsb.)
+>   - **Tanggal** dengan pemilih kalender
+>   - **Deskripsi (opsional)** untuk catatan seperti tempat beli atau konteks pengeluaran  
+>   - Tombol **Simpan Perubahan**
+>  
+> Tujuannya adalah bikin proses catat pengeluaran jadi cepat dan tidak menyusahkan. Semua transaksi yang disimpan langsung ikut dihitung dalam total bulanan dan grafik statistik, jadi pengguna tidak lagi “ngeraba-raba uangnya kemana.”
 
 ---
 
@@ -180,15 +170,37 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 </p>
 
 > **Deskripsi:** Grafik & ringkasan per periode.
+> Layar Statistik menampilkan ringkasan perilaku belanja pengguna untuk periode tertentu (contoh: “Statistik Okt 2025”).  
+> Bagian atas menunjukkan:
+> - **Total Pengeluaran Bulan Ini** dengan nilai rupiah terkini.
+> - Kontrol periode (navigasi kiri/kanan + ikon kalender) untuk pindah bulan dengan cepat.  
+>  
+> Visual analitik yang ditampilkan:
+> - **Grafik Donut / Pie “Per Kategori”**: menunjukkan kategori mana yang paling banyak menyerap uang (misalnya Makanan = 100%).  
+> - **Grafik Harian**: menampilkan pola pengeluaran per hari, sehingga pengguna bisa melihat kapan terjadi lonjakan (misal akhir pekan atau tanggal muda).  
+>  
+> Fungsi layar ini bukan cuma kasih angka, tapi bantu pengguna paham pola: kebiasaan boros di kategori apa, di hari apa, dan seberapa berat pengeluaran bulan ini dibandingkan harapan pribadi.
 
 ---
 
 ### 👤 Profile Screen
 <p align="center">
-  <img src="assets/screenshots/export_pdf.png" width="70%" alt="Profile" />
+  <img src="assets\screenshots\DEMO8_ProfileScreen.png" width="70%" alt="Profile" />
 </p>
 
-> **Deskripsi:** .
+> **Deskripsi:** 
+> Layar profil mengumpulkan semua hal yang sifatnya personal, keamanan akun, dan preferensi aplikasi.  
+> Dari sini pengguna bisa:
+> - Melihat identitas akun (nama, email).
+> - **Edit Profil** seperti nama tampilan atau nomor telepon opsional.
+> - **Ganti Password** dengan validasi keamanan.
+> - Masuk ke **Pengaturan** (settings) untuk hal-hal seperti logout dan informasi versi aplikasi.
+> - Membuka halaman **Tentang Aplikasi** untuk melihat versi build dan detail teknis.
+> - Melakukan tindakan sensitif seperti **Hapus Akun**.  
+>  
+> Proses hapus akun dilindungi peringatan merah dan konfirmasi password supaya tidak terjadi penghapusan tidak sengaja.  
+> Layar ini juga menampilkan manajemen **Kategori** milik pengguna (tambah kategori baru, ubah, hapus), karena setiap orang punya pola pengeluaran yang unik.  
+> Intinya: pengguna punya kontrol penuh atas data miliknya dan bisa mengatur identitas finansialnya sendiri.
 
 ---
 
@@ -197,8 +209,17 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
   <img src="assets\screenshots\DEMO9_SharedExpansesScreen.png" width="70%" alt="Share Expanses" />
 </p>
 
-> **Deskripsi:** .
-
+> **Deskripsi:** 
+> Fitur Shared Expenses dirancang untuk mencatat pengeluaran bersama—misalnya patungan makan, bayar kos bareng, langganan streaming keluarga, atau iuran tim nongkrong.  
+>  
+> Alurnya:
+> 1. Pengguna membuka tab **Shared** dari bottom navigation.  
+> 2. Jika belum ada data, layar menampilkan status kosong dan tombol **Tambah Shared Expense**.  
+> 3. Saat menambah, pengguna mengisi detail transaksi (judul, nominal, catatan), memilih siapa saja yang terlibat, dan menentukan bagaimana biaya dibagi.  
+>  
+> Setelah disimpan, setiap shared expense muncul dalam daftar lengkap dengan rincian siapa bayar berapa.  
+> Tujuan fitur ini adalah transparansi dan fairness: semua orang yang terlibat bisa melihat catatan yang sama, tidak ada lagi drama “utang siapa ini?” atau “kemarin siapa yang bayarin ya?”.  
+> Dengan shared expense yang terdokumentasi rapi, urusan patungan jadi jelas, aman, dan nggak bikin sungkan.
 ---
 ## 🌟 Fitur Utama
 
@@ -229,7 +250,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 ## 🧰 Prasyarat
 
-* **Flutter** (stable 3.x) & **Dart 3.x** terpasang
+* **Flutter** (stable 3.35.1) & **Dart 3.9.0** terpasang
 * SDK platform sesuai target (Android/iOS/Web/Desktop)
 * Perangkat/Emulator aktif
 
@@ -361,12 +382,6 @@ Kontribusi terbuka untuk perbaikan bug, dokumentasi, atau pengembangan fitur.
 
 * **Apip** — Developer utama
   *Politeknik Negeri Malang, Teknologi Informasi*
-
----
-
-## 🛡️ Lisensi
-
-Rilis di bawah **MIT License**. Silakan lihat file `LICENSE` untuk detail.
 
 ---
 

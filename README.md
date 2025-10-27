@@ -36,7 +36,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 <p align="left">
   <!-- Badges (opsional, boleh kamu hapus) -->
   <a href="https://flutter.dev/"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-3.35.1-blue.svg" /></a>
-  <a href="https://dart.dev/"><img alt="Dart" src="https://img.shields.io/badge/Dart-3.9,0-0175C2.svg" /></a>
+  <a href="https://dart.dev/"><img alt="Dart" src="https://img.shields.io/badge/Dart-3.9.0-0175C2.svg" /></a>
   <a href="#"><img alt="Platform" src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Desktop-informational.svg" /></a>
 </p>
 

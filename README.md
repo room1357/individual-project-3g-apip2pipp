@@ -109,7 +109,7 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 >Selain login biasa, ada juga opsi Gunakan akun demo — ini memungkinkan pengguna mencoba aplikasi tanpa membuat akun baru terlebih dahulu, cocok untuk onboarding cepat.
 >Bagian bawah layar juga mempersiapkan dukungan login pihak ketiga (Google / Apple), yang merepresentasikan arah pengembangan ke integrasi Single Sign-On agar proses masuk makin cepat dan aman.
 >Fokus dari layar ini adalah rasa aman, kesan profesional, dan kesan bahwa pengelolaan finansial itu personal tapi tetap rapi.
-
+>
 > **Deskripsi Register:** Halaman pendaftaran digunakan untuk membuat akun baru di SakuRapi. Pengguna mengisi nama lengkap, email, password, dan konfirmasi password.
 >Flow ini dibuat sederhana agar proses bergabung tidak terasa “ribet seperti aplikasi keuangan profesional”, tapi tetap menjaga kontrol dasar seperti verifikasi password untuk mencegah salah input.
 >Tombol DAFTAR membuat akun lokal baru di perangkat. Ada shortcut Isi dengan demo yang membantu pengguna mencoba fitur tanpa mengisi manual satu per satu, sehingga barrier to entry jadi rendah.
@@ -125,21 +125,19 @@ Proyek ini adalah aplikasi Flutter sederhana untuk tugas mata kuliah Pemrograman
 
 > **Deskripsi:** Layar Home berfungsi sebagai dashboard pribadi pengguna. Di bagian atas terdapat sapaan personal (“Halo, [nama]! 👋”) untuk memberi rasa kepemilikan dan kedekatan, bukan sekadar aplikasi angka.
 >Widget ringkasan menunjukkan:
-
+>
 > - Total Pengeluaran Bulan Ini beserta total nominal dan jumlah transaksi.
-
 > - Pengeluaran Hari Ini (berapa rupiah yang keluar hari ini).
-
 > - Jumlah Transaksi Hari Ini (berapa transaksi yang sudah tercatat).
-
+>
 >Di bawahnya ada Riwayat Transaksi terbaru (misal: “Mie ayam paknno”), lengkap dengan tanggal dan jumlah rupiah. Ini membantu pengguna cepat ingat “tadi aku habis buat apa ya?”. Navigasi bawah (Home, Statistik, Pengeluaran, Shared, Profil) selalu terlihat, sehingga pengguna bisa langsung:
-
+>
 >- menambah pengeluaran baru,
 >- buka statistik,
 >- cek pengeluaran bersama,
 >- atau ubah profil,
 >hanya dengan satu tap.
-
+>
 >Prinsip layar ini: kasih jawaban cepat atas tiga pertanyaan yang paling sering muncul di kepala pengguna — “Uangku sudah keluar berapa?”, “Hari ini aku beli apa aja?”, dan “Apa aku masih aman bulan ini?”
 
 ---

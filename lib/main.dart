@@ -7,6 +7,7 @@ import 'services/expense_service.dart';
 import 'services/storage_service.dart';
 import 'services/auth_service.dart';
 import 'services/shared_expense_service.dart';
+import 'providers/posts_provider.dart';
 
 // screens
 import 'screens/onboarding_screen.dart';
@@ -19,15 +20,14 @@ import 'screens/expense_list_screen.dart';
 import 'screens/category_screen.dart';
 import 'screens/statistics_screen.dart';
 import 'screens/profile_screen.dart';
-import 'screens/edit_profile_screen.dart';
-import 'screens/change_password_screen.dart';
-import 'screens/delete_account_screen.dart';
+
 import 'screens/settings_screen.dart';
 import 'screens/about_screen.dart';
 import 'screens/looping_demo_screen.dart';
 import 'screens/shared_expense_screen.dart';
 import 'screens/add_shared_expense_screen.dart';
 import 'screens/user_selection_screen.dart';
+import 'screens/posts_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +36,8 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
+        // Provider untuk posts
+        ChangeNotifierProvider(create: (_) => PostsProvider()),
         // ⬇️ PROVIDER UNTUK AUTH (wajib ada agar context.read<AuthService>() tidak error)
         ChangeNotifierProvider(create: (_) => AuthService()..loadSession()),
         // ⬇️ PROVIDER UNTUK EXPENSE (terintegrasi dengan AuthService)
@@ -111,6 +113,7 @@ class MyApp extends StatelessWidget {
         '/shared-expenses': (_) => const SharedExpenseScreen(),
         '/add-shared-expense': (_) => const AddSharedExpenseScreen(),
         '/user-selection': (_) => const UserSelectionScreen(),
+        '/posts': (_) => const PostsScreen(),
       },
     );
   }

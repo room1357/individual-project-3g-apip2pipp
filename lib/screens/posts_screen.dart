@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../client/rest_client.dart';
 import '../services/post_service.dart';
 import '../models/post.dart';
+import '../providers/posts_provider.dart';
 
 class PostsScreen extends StatefulWidget {
   const PostsScreen({super.key});
@@ -13,7 +15,6 @@ class PostsScreen extends StatefulWidget {
 class _PostsScreenState extends State<PostsScreen> {
   late final RestClient _client;
   late final PostService _service;
-  List<Post> _posts = [];
   bool _loading = false;
 
   @override
@@ -31,9 +32,7 @@ class _PostsScreenState extends State<PostsScreen> {
     try {
       final posts = await _service.list(limit: 50);
       if (!mounted) return;
-      setState(() {
-        _posts = posts;
-      });
+      context.read<PostsProvider>().setPosts(posts);
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(
@@ -115,7 +114,7 @@ class _PostsScreenState extends State<PostsScreen> {
         body: bodyCtl.text,
       );
 
-      // Optimistic insert
+      // Create optimistic post
       final tmp = Post(
         id: null,
         userId: post.userId,
@@ -123,25 +122,18 @@ class _PostsScreenState extends State<PostsScreen> {
         body: post.body,
       );
       if (!mounted) return;
-      setState(() {
-        _posts.insert(0, tmp);
-      });
+      context.read<PostsProvider>().addPost(tmp);
 
       try {
         final created = await _service.create(post);
         if (!mounted) return;
-        setState(() {
-          _posts[0] = created;
-        });
-        if (!mounted) return;
+        context.read<PostsProvider>().updatePost(created);
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(const SnackBar(content: Text('Post created')));
       } catch (e) {
         if (!mounted) return;
-        setState(() {
-          _posts.removeAt(0);
-        });
+        context.read<PostsProvider>().deletePost(tmp.id ?? -1);
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text('Failed to create post: $e')));
@@ -149,8 +141,7 @@ class _PostsScreenState extends State<PostsScreen> {
     }
   }
 
-  Future<void> _showEditDialog(int index) async {
-    final post = _posts[index];
+  Future<void> _showEditDialog(Post post) async {
     final titleCtl = TextEditingController(text: post.title);
     final bodyCtl = TextEditingController(text: post.body);
     final formKey = GlobalKey<FormState>();
@@ -208,21 +199,17 @@ class _PostsScreenState extends State<PostsScreen> {
         body: bodyCtl.text,
       );
 
-      // optimistic update
-      setState(() {
-        _posts[index] = updated;
-      });
+      // Optimistic update
+      if (!mounted) return;
+      context.read<PostsProvider>().updatePost(updated);
 
       try {
         final saved = await _service.update(updated);
         if (!mounted) return;
-        setState(() {
-          _posts[index] = saved;
-        });
+        context.read<PostsProvider>().updatePost(saved);
       } catch (e) {
         if (!mounted) return;
-        await _loadPosts();
-        if (!mounted) return;
+        await _loadPosts(); // Reload on error
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text('Failed to update post: $e')));
@@ -230,27 +217,20 @@ class _PostsScreenState extends State<PostsScreen> {
     }
   }
 
-  Future<void> _deletePost(int index) async {
-    final id = _posts[index].id;
-    if (id == null) {
-      setState(() {
-        _posts.removeAt(index);
-      });
-      return;
-    }
+  Future<void> _deletePost(Post post) async {
+    final provider = context.read<PostsProvider>();
 
-    final removed = _posts[index];
-    setState(() {
-      _posts.removeAt(index);
-    });
+    // Optimistic delete
+    provider.deletePost(post.id ?? -1);
 
     try {
-      await _service.delete(id);
+      if (post.id != null) {
+        await _service.delete(post.id!);
+      }
     } catch (e) {
       if (!mounted) return;
-      setState(() {
-        _posts.insert(index, removed);
-      });
+      // Restore on error
+      provider.addPost(post);
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('Failed to delete post: $e')));
@@ -265,6 +245,8 @@ class _PostsScreenState extends State<PostsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final posts = context.watch<PostsProvider>().posts;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Posts'),
@@ -278,10 +260,10 @@ class _PostsScreenState extends State<PostsScreen> {
                 ? const Center(child: CircularProgressIndicator())
                 : ListView.separated(
                   padding: const EdgeInsets.all(8),
-                  itemCount: _posts.length,
+                  itemCount: posts.length,
                   separatorBuilder: (_, __) => const Divider(height: 1),
                   itemBuilder: (context, index) {
-                    final post = _posts[index];
+                    final post = posts[index];
                     return ListTile(
                       title: Text(post.title),
                       subtitle: Text(
@@ -294,11 +276,11 @@ class _PostsScreenState extends State<PostsScreen> {
                         children: [
                           IconButton(
                             icon: const Icon(Icons.edit),
-                            onPressed: () => _showEditDialog(index),
+                            onPressed: () => _showEditDialog(post),
                           ),
                           IconButton(
                             icon: const Icon(Icons.delete),
-                            onPressed: () => _deletePost(index),
+                            onPressed: () => _deletePost(post),
                           ),
                         ],
                       ),

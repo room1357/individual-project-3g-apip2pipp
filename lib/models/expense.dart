@@ -1,4 +1,5 @@
 import 'dart:convert';
+import '../utils/currency_utils.dart';
 
 class Expense {
   final String id;
@@ -73,8 +74,8 @@ class Expense {
     'sharedWith': sharedWith,
   };
 
-  /// Getter sederhana biar bisa dipakai di UI tanpa dependensi util
-  String get formattedAmount => 'Rp ${amount.toStringAsFixed(0)}';
+  /// Getter sederhana: gunakan format rupiah lokal Indonesia
+  String get formattedAmount => CurrencyUtils.format(amount);
   String get formattedDate => '${date.day}/${date.month}/${date.year}';
 
   // Helper opsional untuk simpan sebagai String

@@ -90,8 +90,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'SakuRapi',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF6366F1), // Indigo yang modern
+          brightness: Brightness.light,
+        ).copyWith(
+          secondary: const Color(0xFF818CF8), // Warna sekunder
+          tertiary: const Color(0xFFF472B6), // Warna aksen
+        ),
         useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFFF8FAFC),
+        appBarTheme: const AppBarTheme(elevation: 0, centerTitle: true),
       ),
 
       // pakai named routes
